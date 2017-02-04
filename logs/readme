@@ -1,0 +1,2 @@
+SparkBot directory for log file
+to enable looging settings please modify log4j2.xml under /config directory 

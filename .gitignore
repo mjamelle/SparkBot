@@ -1,0 +1,11 @@
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+config/config.json
+logs/bot.log
+nbactions.xml
+nb-configuration.xml
