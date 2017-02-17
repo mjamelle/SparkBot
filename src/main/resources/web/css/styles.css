@@ -1,0 +1,13 @@
+img {
+  float: right;
+  margin-right: 50;
+}
+h1 {
+  padding-left: 50;
+}
+.jumbotron {
+  margin-bottom: 0;
+}
+dropdown-menu {
+  float: right;
+}

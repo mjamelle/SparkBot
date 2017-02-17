@@ -1,14 +1,31 @@
 <html>
   <head>
     <title>Hello Friend!</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <div class="container">
-      <img src="images/fireball-152-196149.png" alt="Spark Fireball">
-      #parse( $template )
-
+    <div class="jumbotron">
+      <img src="images/fireball-webpage.png" alt="Spark Fireball">
+      <h1>Maja - Cisco Spark Bot</h1>
     </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Action <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="/">Welcome</a></li>
+          <li><a href="/setup">Setup</a></li>
+          <li><a href="/info">Informations</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="mailto:mjamelle@gmail.com">Send me an email</a></li>
+        </ul>
+    </div>
+    <div class="container">
+      #parse( $template )
+    </div>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
   </body>
 </html>
