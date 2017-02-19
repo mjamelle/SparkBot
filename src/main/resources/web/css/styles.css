@@ -4,9 +4,11 @@ img {
 }
 h1 {
   padding-left: 50;
+  margin: 0;
 }
 .jumbotron {
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 dropdown-menu {
   float: right;
