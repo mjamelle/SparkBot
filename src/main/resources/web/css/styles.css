@@ -1,15 +1,10 @@
 img {
   float: right;
-  margin-right: 50;
-}
-h1 {
-  padding-left: 50;
-  margin: 0;
-}
-.jumbotron {
-  margin: 0;
-  padding: 0;
 }
 dropdown-menu {
   float: right;
+}
+#Head {
+  margin: 0;
+  padding: 20;
 }
