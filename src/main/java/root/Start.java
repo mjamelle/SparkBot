@@ -66,7 +66,7 @@ public class Start {
             logger.info("/ Web request");
             logger.debug("/ Web request : " + request.body());
             Map<String, Object> model = new HashMap<String, Object>();
-            model.put("template", "/web/Welcome.vtl" );
+            model.put("template", "/web/Welcome.html" );
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
         
@@ -74,7 +74,7 @@ public class Start {
             logger.info("/setup Web request");
             logger.debug("/setup Web request : " + request.body());
             Map<String, Object> model = new HashMap<String, Object>();
-            model.put("template", "/web/Setup_form.vtl");
+            model.put("template", "/web/Setup_form.html");
             model.put("AccessToken", config.getAccessToken());
             model.put("ServerURL", config.getServerURL());
             model.put("ServerPort", config.getServerPort());
@@ -96,7 +96,7 @@ public class Start {
             logger.info("/info Web request");
             logger.debug("/info Web request : " + request.body());
             Map<String, Object> model = new HashMap<String, Object>();
-            model.put("template", "/web/Info_form.vtl");
+            model.put("template", "/web/Info_form.html");
             model.put("Botrequestcounter", BotLogic.getBotrequestcounter());
             model.put("Roomamount", CiscoSpark.getRoomamount());
             return new ModelAndView(model, layout);
