@@ -28,6 +28,7 @@ import spark.ModelAndView;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.config.Configurator;
+import org.json.simple.JSONObject;
 
 
         
@@ -106,6 +107,7 @@ public class Start {
             logger.info("/webhook/messages Web request");
             logger.debug("/webhook/messages Web request : " + request.body());
             BotLogic.webHookMessageTrigger(request);
+            response.status(200);
             return "ok";  
         });
                
@@ -113,8 +115,24 @@ public class Start {
             logger.info("/webhook/rooms Web request");
             logger.debug("/webhook/rooms Web request : " + request.body());
             BotLogic.webHookRoomsTrigger(request);
+            response.status(200);
             return "ok";  
-        });        
+        });
+        
+        // REST Implementation
+        get("/rest/config", (request, response) -> {
+            logger.info("/rest/config Web request");
+            logger.debug("/rest/config Web request : " + request.body());
+            response.status(200);
+            response.type("application/json");
+            
+            //load config into JSONObject
+            JSONObject obj = new JSONObject();
+            obj.put("Botrequest", BotLogic.getBotrequestcounter());
+            obj.put("Rooms", CiscoSpark.getRoomamount());
+            logger.debug("/rest/config Web response : " + obj.toJSONString());
+            return obj.toJSONString();  
+        });
     }
     
 }
